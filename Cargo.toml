@@ -1,0 +1,27 @@
+# Q7 输入法 Rust workspace
+# 成员布局见 docs/architecture.md「目录结构」一节
+[workspace]
+resolver = "3"
+members = [
+    "crates/q7-core",
+    "crates/q7-engine",
+    "crates/q7-ipc",
+    "crates/q7-server",
+    "crates/q7-tsf",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+repository = "https://github.com/7Z-F-T/Q7-Input-method"
+
+[workspace.dependencies]
+q7-core = { path = "crates/q7-core" }
+q7-engine = { path = "crates/q7-engine" }
+q7-ipc = { path = "crates/q7-ipc" }
+serde = { version = "1", features = ["derive"] }
+postcard = { version = "1", features = ["use-std"] }
+thiserror = "2"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }

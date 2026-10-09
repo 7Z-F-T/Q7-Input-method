@@ -1,0 +1,20 @@
+[package]
+name = "q7-tsf"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Q7 输入法 Windows TSF 文本服务（进程内 COM DLL，必须轻量且绝不 panic）"
+
+[lib]
+crate-type = ["cdylib"]
+
+# LNK4104：COM 导出符号（DllGetClassObject 等）必须导出，此提示属正常
+[lints.rust]
+linker_messages = "allow"
+
+[dependencies]
+q7-core.workspace = true
+q7-ipc.workspace = true
+windows = { version = "0.62.2", features = ["Win32_Foundation", "Win32_Storage_FileSystem", "Win32_System_Pipes", "Win32_System_Com", "Win32_Security", "Win32_UI_TextServices", "Win32_UI_Input_KeyboardAndMouse", "Win32_System_LibraryLoader", "Win32_System_Diagnostics_Debug"] }
+windows-core = "0.62"
+winreg = "0.56.0"

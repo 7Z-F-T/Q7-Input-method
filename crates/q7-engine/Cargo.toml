@@ -1,0 +1,9 @@
+[package]
+name = "q7-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Q7 输入法拼音引擎（纯 Rust，零 Windows 依赖，为跨平台留路）"
+
+[dependencies]
+q7-core.workspace = true

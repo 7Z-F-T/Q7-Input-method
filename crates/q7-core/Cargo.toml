@@ -1,0 +1,9 @@
+[package]
+name = "q7-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Q7 输入法共享层：无平台依赖的类型与 IPC 协议定义"
+
+[dependencies]
+serde.workspace = true

@@ -1,0 +1,19 @@
+# IDE
+.idea
+*.iml
+.vscode/
+
+# 压缩包
+*.zip
+*.7z
+
+# Rust
+/target/
+**/*.rs.bk
+
+# Node（Tauri 前端）
+node_modules/
+dist/
+
+# 本地环境
+*.local

@@ -1,0 +1,13 @@
+[package]
+name = "q7-server"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Q7 输入法 PoC 服务进程（后续将由 Tauri 宿主进程内嵌）"
+
+[dependencies]
+q7-core.workspace = true
+q7-engine.workspace = true
+q7-ipc.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
